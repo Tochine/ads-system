@@ -37,7 +37,7 @@ class AdvertsTableSeeder extends Seeder
                 'image' => 'https://source.unsplash.com/random/300x400',
                 'duration' => rand(2),
             ]
-            
+           
         ]);
     }
 }
