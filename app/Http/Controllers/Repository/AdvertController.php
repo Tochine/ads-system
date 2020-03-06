@@ -45,8 +45,7 @@ class AdvertController extends Controller
     public function index()
     {
         $adverts = $this->advertRepository->all();
-        return $adverts;
-        //return view('adverts.index', compact('adverts'));
+        return view('adverts.index', compact('adverts'));
     }
 
     /**
@@ -54,10 +53,9 @@ class AdvertController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(array $data)
     {
-        //return parent::create();
-        return view('adverts.create');
+        return View::make('adverts.create');
     }
 
     /**

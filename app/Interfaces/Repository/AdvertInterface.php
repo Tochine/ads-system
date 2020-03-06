@@ -13,6 +13,8 @@ interface AdvertInterface extends ContractInterface
 {
     public function all();
 
+    public function create(array $data);
+
     public function findById($advert);
 
     public function updateById($advert);

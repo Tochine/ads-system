@@ -22,7 +22,7 @@ class AdvertRepository extends AbstractRepository implements AdvertInterface
      */
     public function __construct(App $app)
     {
-        parent::__construct($app);
+        $this->app = $app;
     }
 
     /**
@@ -36,7 +36,13 @@ class AdvertRepository extends AbstractRepository implements AdvertInterface
     public function all()
     {
         return Advert::orderBy('title', 'asc')->get();
+        
 
+    }
+
+    public function create(array $data)
+    {
+        return $this->app->create($data);
     }
 
     public function findById($advert)
